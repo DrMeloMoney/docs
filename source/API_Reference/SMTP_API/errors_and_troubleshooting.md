@@ -119,7 +119,7 @@ Certificate verification failed for smtp.sendgrid.net
 
  *To update your certificates:*
 
-1. ownload the GoDaddy CA bundle from [https://certs.godaddy.com/anonymous/repository.pki](https://certs.godaddy.com/anonymous/repository.pki) (grab the one called `"gd\_bundle-g2-g1.crt"`).
+1. Download the GoDaddy CA bundle from [https://certs.godaddy.com/anonymous/repository.pki](https://certs.godaddy.com/anonymous/repository.pki) (grab the one called `"gd\_bundle-g2-g1.crt"`).
 1. Save that on your server.
 1. Tell Postfix where to find it by adding or editing the following line in `/etc/postfix/` [main.cf](http://main.cf/): `"smtp\_tls\_CAfile = /etc/postfix/ssl/gd\_bundle-g2-g1.crt"`
 1. Restart Postfix to make the change take effect.
